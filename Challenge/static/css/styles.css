@@ -1,0 +1,86 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2900&q=80');
+    background-size: cover;
+    background-position: left;
+    color: thistle;
+}
+
+#jumbotron {
+    background-image: url('https://images.unsplash.com/photo-1538551868183-edf7bfc50391?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+h1, h2 {
+    font-family: 'New Tegomin', serif;
+}
+
+.jumbotron h1 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 5px;
+    color: thistle;
+}
+
+.jumbotron .btn {
+    background-color: teal;
+    border: 0;
+    color: whitesmoke;
+    font-weight: 100;
+    box-shadow: 0 0 5px black;
+}
+
+.jumbotron .btn:hover {
+    font-weight: 200;
+    /* letter-spacing: 1px; */
+    text-shadow: 0 0 1px whitesmoke;
+    box-shadow: 0 0 10px black;
+}
+
+.container-fluid {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.shadow {
+    box-shadow: 0 0 8px #888888;
+}
+
+.shadow:hover {
+    box-shadow: 0 0 12px #888888;
+}
+
+#mars-news {
+    margin-top: 0;
+}
+
+.media-body hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(216,191,216, 0), rgba(216,191,216, 0.75), rgba(216,191,216, 0));
+}
+
+.media-heading {
+    font-family: 'Special Elite', cursive;
+}
+
+.media-teaser {
+    font-family: 'Josefin Slab', serif;
+}
+
+#mars-hemispheres {
+    margin-top: 50px;
+}
+
+.thumbnail {
+    border: 3px solid black;
+    background-color: black;
+}
+
+.thumbnail .caption {
+    color: grey;
+}
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Special+Elite&family=New+Tegomin&family=Raleway:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+  </head>
+  <body>
+    <div class="jumbotron text-center shadow" id='jumbotron'>
+      <h1>MISSION TO MARS</h1><br>
+      <a class="btn btn-info btn-lg" href="/scrape" role="button">SCRAPE</a>
+    </div>
+
+    <!-- Mars News -->
+    <div class="row container-fluid" id="mars-news">
+      <div class="news-content col-md-12">
+        <div class="media">
+          <div class="media-body">
+            <h1>LATEST MARS NEWS...</h1><br>
+            <h3 class="media-heading">{{ mars.news_title }}</h3>
+            <h4 class="media-teaser">{{ mars.news_teaser }}</h4>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Image and Facts table -->
+    <div class="row container-fluid" id="mars-featured-image">
+      <div class="col-md-8">
+        <h2>FEATURED MARS IMAGE</h2><br>
+        <img
+          src="{{mars.featured_image | default('static/images/error.png', true) }}"
+          class="img-responsive shadow"
+          alt="Responsive image"
+        />
+      </div>
+      <div class="col-md-4">
+        <div class="row" id="mars-facts">
+          <h2 class='text-right'>MARS-EARTH FACTS</h2><br>
+          {{ mars.facts.replace('class="','class="table shadow ') | safe }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Mars Hemispheres -->
+    <div class="row container-fluid" id="mars-hemispheres">
+      <h1 class="text-center">MARS HEMISHPERES</h1><br>
+      {% for hemisphere in mars.hemispheres %}
+      <div class="col-md-3">
+        <div class="thumbnail shadow">
+          <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
+          <div class="caption text-center">
+            <h3>{{hemisphere.title}}</h3>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
